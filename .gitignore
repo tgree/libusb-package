@@ -3,6 +3,7 @@
 *.d
 *.map
 *.bak
+*.swp
 
 # Eclipse Project Files
 .cproject
