@@ -58,11 +58,11 @@ tags
 .cache
 .pytest_cache
 
-src/libusb_package/_version.py
-src/libusb_package/*.dylib
-src/libusb_package/*.so
-src/libusb_package/*.dll
-src/libusb_package/*.lib
+src/libusb_package_2/_version.py
+src/libusb_package_2/*.dylib
+src/libusb_package_2/*.so
+src/libusb_package_2/*.dll
+src/libusb_package_2/*.lib
 
 # pyocd config files
 pyocd.yaml

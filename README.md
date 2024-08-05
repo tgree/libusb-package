@@ -38,17 +38,17 @@ done in-place in the `src/libusb` directory. `make clean` is run before compilin
 
 ## APIs
 
-There are four public functions exported by `libusb_package`.
+There are four public functions exported by `libusb_package_2`.
 
 - `find(*args, **kwargs)`: Wrapper around pyusb's `usb.core.find()` that sets the `backend`
-    parameter to a libusb1 backend created from the libusb library included in `libusb_package`.
+    parameter to a libusb1 backend created from the libusb library included in `libusb_package_2`.
     All other parameters are passed unmodified
 
 - `get_libusb1_backend()`: Returns a `pyusb` backend object for the libusb version contained
-    in `libusb_package`.
+    in `libusb_package_2`.
 
 - `find_library(candidate)`: Lower level function that returns either the full path to a
-    library contained in `libusb_package` with a name starting with `candidate`, or None if
+    library contained in `libusb_package_2` with a name starting with `candidate`, or None if
     no matching library is found. This function is suitable for use with the `find_library`
     callback parameter for pyusb's `get_backend()` functions.
 
@@ -73,9 +73,9 @@ to 0 when the libusb version is incremented for new libusb release.
 Usage example for `find()`:
 
 ```py
-import libusb_package
+import libusb_package_2
 
-for dev in libusb_package.find(find_all=True):
+for dev in libusb_package_2.find(find_all=True):
     print(dev)
 ```
 
@@ -83,11 +83,11 @@ for dev in libusb_package.find(find_all=True):
 Usage example for `find_library()`:
 
 ```py
-import libusb_package
+import libusb_package_2
 import usb.core
 import usb.backend.libusb1
 
-libusb1_backend = usb.backend.libusb1.get_backend(find_library=libusb_package.find_library)
+libusb1_backend = usb.backend.libusb1.get_backend(find_library=libusb_package_2.find_library)
 # -> calls usb.libloader.load_locate_library(
 #                ('usb-1.0', 'libusb-1.0', 'usb'),
 #                'cygusb-1.0.dll', 'Libusb 1',
@@ -97,7 +97,7 @@ libusb1_backend = usb.backend.libusb1.get_backend(find_library=libusb_package.fi
 # -> calls find_library(candidate) with candidate in ('usb-1.0', 'libusb-1.0', 'usb')
 #   returns lib name or path (as appropriate for OS) if matching lib is found
 
-# It would also be possible to pass the output of libusb_package.get_libsusb1_backend()
+# It would also be possible to pass the output of libusb_package_2.get_libsusb1_backend()
 # to the backend parameter here. In fact, that function is simply a shorthand for the line
 # above.
 print(list(usb.core.find(find_all=True, backend=libusb1_backend)))

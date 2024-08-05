@@ -8,11 +8,11 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools_scm]
-write_to = "src/libusb_package/_version.py"
+write_to = "src/libusb_package_2/_version.py"
 fallback_version = "1.0.0.0"
 
 [tool.mypy]
-files = "src/libusb_package"
+files = "src/libusb_package_2"
 ignore_missing_imports = true
 
 [tool.cibuildwheel]

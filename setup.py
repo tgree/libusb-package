@@ -40,7 +40,7 @@ BOOTSTRAP_SCRIPT = LIBUSB_DIR / "bootstrap.sh"
 CONFIGURE_SCRIPT = LIBUSB_DIR / "configure"
 VS_PROJ = LIBUSB_DIR / "msvc" / "libusb_dll_2019.vcxproj"
 
-PACKAGE_NAME = 'libusb_package'
+PACKAGE_NAME = 'libusb_package_2'
 
 # check for mingw environment (recommended method from msys2.org/docs/python)
 IS_CPYTHON_MINGW = os.name == "nt" and sysconfig.get_platform().startswith("mingw")
