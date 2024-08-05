@@ -38,7 +38,7 @@ VSENV_SCRIPT = SCRIPTS_DIR / "vsenv.bat"
 LIBUSB_DIR = ROOT_DIR / "src" / "libusb"
 BOOTSTRAP_SCRIPT = LIBUSB_DIR / "bootstrap.sh"
 CONFIGURE_SCRIPT = LIBUSB_DIR / "configure"
-VS_PROJ = LIBUSB_DIR / "msvc" / "libusb_dll_2019.vcxproj"
+VS_PROJ = LIBUSB_DIR / "msvc" / "libusb_dll.vcxproj"
 
 PACKAGE_NAME = 'libusb_package_2'
 
