@@ -187,7 +187,7 @@ class libusb_build_ext(build_ext):
                     raise LibusbBuildError(str(err)) from err
 
                 out_dir = "x64" if IS_64_BIT else "Win32"
-                lib_paths = [Path(g) for g in glob.glob(f"{out_dir}\\{config}\\dll\\*.dll")]
+                lib_paths = [Path(g) for g in glob.glob(f"build\\*\\{out_dir}\\{config}\\dll\\*.dll")]
 
             if not lib_paths:
                 raise LibusbBuildError(f"libusb failed to build: no libraries found in {build_temp}")
