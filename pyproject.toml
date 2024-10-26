@@ -18,6 +18,7 @@ ignore_missing_imports = true
 [tool.cibuildwheel]
 before-build = "python -m pip install --upgrade pip wheel setuptools setuptools_scm"
 build-verbosity = 1
+skip = "pp*"
 
 [tool.cibuildwheel.linux]
 archs = ["auto", "aarch64"]
