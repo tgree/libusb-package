@@ -1,0 +1,6 @@
+1. Push branch to github.
+2. Make a tag.
+3. Push tag to github.
+4. Wait for github workflow to complete.
+5. Download artifact file from workflow.
+6. python3 -m twine upload *.whl
